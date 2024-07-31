@@ -10,4 +10,15 @@ export const HomeHeader = styled.div`
     margin: 0 auto;
     margin-bottom: 2rem;
   }
+
+  .load-more-button {
+    padding: 4px;
+    border-radius: 99%;
+  }
 `;
+
+export const LoadMoreButton = styled.button`
+  padding: 8px;
+  border-radius: 50%;
+  border: 1px solid #cccccc;
+`
