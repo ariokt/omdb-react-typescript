@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getMovies } from "../../utils/api";
 import MovieList from "../../components/MovieList";
 import { HomeHeader, LoadMoreButton } from "./HomeStyles";
+import ScrollTopButton from "../../components/ScrollTopButton";
 
 const Home = () => {
   const [page, setPage] = useState<number>(1);
@@ -35,6 +36,7 @@ const Home = () => {
       <MovieList moviesData={moviesData} />
       { (!loading && moviesData) && <LoadMoreButton onClick={handleChangePage}>More...</LoadMoreButton> }
       { loading && <div style={{ color: 'white', textAlign: 'center' }}>Loading...</div> }
+      <ScrollTopButton />
     </div>
   )
 }

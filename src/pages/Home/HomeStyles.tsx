@@ -21,4 +21,5 @@ export const LoadMoreButton = styled.button`
   padding: 8px;
   border-radius: 50%;
   border: 1px solid #cccccc;
+  cursor: pointer;
 `
