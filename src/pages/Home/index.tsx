@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getMovies } from "../../utils/api";
 import MovieList from "../../components/MovieList";
-import { HomeHeader, LoadMoreButton } from "./HomeStyles";
+import { HomeHeader, LoadMoreButton, StyledHome } from "./HomeStyles";
 import ScrollTopButton from "../../components/ScrollTopButton";
 
 const Home = () => {
@@ -29,15 +29,15 @@ const Home = () => {
   }
 
   return (
-    <div style={{padding: '20px 20px 80px 20px'}}>
+    <StyledHome>
       <HomeHeader>
         <h1>OMDb Movies</h1>
       </HomeHeader>
       <MovieList moviesData={moviesData} />
-      { (!loading && moviesData) && <LoadMoreButton onClick={handleChangePage}>More...</LoadMoreButton> }
+      { (!loading && moviesData.length < 100) && <LoadMoreButton onClick={handleChangePage}>More...</LoadMoreButton> }
       { loading && <div style={{ color: 'white', textAlign: 'center' }}>Loading...</div> }
       <ScrollTopButton />
-    </div>
+    </StyledHome>
   )
 }
 

@@ -1,12 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
 #root {
   max-width: 768px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem;
   text-align: center;
   background-color: #141414;
   color: white;
 }
 
-body {
+body, h1, h2, p {
   margin: 0;
 }

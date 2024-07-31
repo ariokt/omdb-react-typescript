@@ -6,6 +6,7 @@ export const StyledScrollTopButton  = styled.button`
   bottom: 2rem;
   color: white;
   background-color: #141414;
+  border: 1px solid white;
   border-radius: 50%;
   cursor: pointer;
   padding: 0.75rem;
